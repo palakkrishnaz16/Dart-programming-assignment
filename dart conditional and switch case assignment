@@ -1,1 +1,186 @@
+void main() {
+  int a = 60;
+  int b = 25;
+  if (a > b) {
+    print('Maximum of $a and $b is $a');
+  } else {
+    print('Maximum of $a and $b is $b');
+  }
+}
+
+
+void main() {
+  int x = 2;
+  int y = 4;
+  int z = 8;
+  if (x > y && x > z) {
+    print('Maximum of $x, $y, and $z is $x');
+  } else if (y > z) {
+    print('Maximum of $x, $y, and $z is $y');
+  } else {
+    print('Maximum of $x, $y, and $z is $z');
+  }
+}
+
+
+
+void main() {
+  int num = -67;
+  if (num > 0) {
+    print('$num is positive');
+  } else if (num < 0) {
+    print('$num is negative');
+  } else {
+    print('$num is zero');
+  }
+}
+
+
+
+void main() {
+  int number = 24;
+  if (number % 2 == 0 && number % 12 == 0) {
+    print('$number is divisible by both 2 and 12');
+  } else {
+    print('$number is not divisible by both 2 and 12');
+  }
+}
+
+
+
+void main() {
+  int oddEvenNum = 7;
+  if (oddEvenNum % 2 == 0) {
+    print('$oddEvenNum is even');
+  } else {
+    print('$oddEvenNum is odd');
+  }
+}
+
+
+void main() {
+  int year = 2012;
+  if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+    print('$year is a leap year');
+  } else {
+    print('$year is not a leap year');
+  }
+}
+
+
+void main() {
+  int physics = 79,
+      chemistry = 89,
+      biology = 98,
+      mathematics = 95,
+      computer = 99;
+  int total = physics + chemistry + biology + mathematics + computer;
+  double percentage = total / 5;
+
+  if (percentage >= 90) {
+    print('Percentage: $percentage% - Grade: A');
+  } else if (percentage >= 80) {
+    print('Percentage: $percentage% - Grade: B');
+  } else if (percentage >= 70) {
+    print('Percentage: $percentage% - Grade: C');
+  } else if (percentage >= 60) {
+    print('Percentage: $percentage% - Grade: D');
+  } else if (percentage >= 40) {
+    print('Percentage: $percentage% - Grade: E');
+  } else {
+    print('Percentage: $percentage% - Grade: F');
+  }
+}
+
+
+
+void main() {
+  double basicSalary = 12000;
+  double hra, da;
+
+  if (basicSalary <= 10000) {
+    hra = basicSalary * 0.2;
+    da = basicSalary * 0.8;
+  } else if (basicSalary <= 20000) {
+    hra = basicSalary * 0.25;
+    da = basicSalary * 0.9;
+  } else {
+    hra = basicSalary * 0.3;
+    da = basicSalary * 0.95;
+  }
+
+  double grossSalary = basicSalary + hra + da;
+  print('Gross Salary: $grossSalary');
+}
+
+
+void main() {
+  int month = 10;
+  int year = 2024;
+  int days;
+
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      days = 31;
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      days = 30;
+      break;
+    case 2:
+      days =
+          ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) ? 29 : 28;
+      break;
+    default:
+      print('Invalid month');
+      return;
+  }
+
+  print('Number of days in month $month is $days');
+}
+
+
+
+import 'dart:io';
+
+void main() {
+  print("Enter a character: ");
+  String? input = stdin.readLineSync();
+
+  if (input != null && input.length == 1) {
+    String character = input.toLowerCase();
+
+    switch (character) {
+      case 'a':
+      case 'e':
+      case 'i':
+      case 'o':
+      case 'u':
+        print('$character is a vowel');
+        break;
+      default:
+        if (RegExp(r'^[a-z]$').hasMatch(character)) {
+          print('$character is a consonant');
+        } else {
+          print('Invalid input. Please enter a single alphabetic character.');
+        }
+    }
+  } else {
+    print('Invalid input. Please enter a single character.');
+  }
+}
+
+
+
+
+
+
 
